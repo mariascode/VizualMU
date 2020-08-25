@@ -1,0 +1,424 @@
+body{
+margin-top: 0;
+margin-left:0 auto;
+margin-right: 0 auto;
+background-image: linear-gradient(180deg, #32008f 0%, #bd99ff 100%);
+overflow-x: hidden;
+}
+
+/* Navigation */
+
+.nav-container{
+display: flex;
+justify-content: flex-end;
+}
+
+#logo{
+display: grid;
+font-family: 'Pacifico', cursive;
+font-size: 1em;
+text-transform: uppercase;
+color: #FF7075;
+text-align: left;
+}
+
+
+nav{
+position: fixed;
+z-index: 100;
+display: grid;
+grid-template-columns:auto;
+grid-template-rows: repeat(4,auto);
+grid-auto-flow: row;
+justify-self: end;
+justify-items: end;
+backdrop-filter: blur(4px);
+}
+
+
+@media only screen and (min-width: 600px) {
+nav{ 
+grid-auto-flow: column;
+grid-template-columns: repeat(4, 25%);
+grid-template-rows: auto ;
+width: 100vw;
+justify-items: center;
+align-items: center;
+padding-bottom: 0.7em;
+padding-top: 1em;
+backdrop-filter: blur(4px);
+}}
+
+nav a {
+    text-decoration: none;
+    color: #FF7075;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (min-width: 600px) {
+    nav a{ 
+        font-size: 2em;
+    }}
+    
+nav a:hover, ::selection{
+    text-decoration:underline;
+}
+
+
+/* First Frame */
+.frame{
+display: flex;
+margin-top: 9em;
+display: flex;
+flex-wrap:wrap;
+align-items: center;
+justify-content: center;
+}
+
+@media only screen and (min-width: 769px) {
+.frame{ 
+flex-wrap:nowrap;
+flex-direction: row-reverse;
+margin-top: 11em;
+}}
+
+@media only screen and (min-width: 769px) {
+    .homeText{ 
+    width: 60vw;
+    }}
+    
+@media only screen and (max-width: 600px) {
+.homeTextDesktop{
+    display: none;
+}}
+
+@media only screen and (min-width: 600px) {
+    .homeTextMobile{
+display: none;
+ }}
+
+.homeButton{
+margin: 0 auto;
+display: flex;
+text-align: center;
+text-decoration: none;
+color: #32008f;
+font-family: 'Nunito', sans-serif;
+font-size: 2em;
+text-transform: uppercase;
+border-radius: 50px;
+padding: 10px 40px 10px 40px;
+background-color: #FF7075;
+box-shadow: 5px 7px 5px 0px rgba(199,88,91,0.3);
+border: none;
+}
+
+.homeButton:hover{
+    box-shadow: 5px 7px 5px 0px rgba(193,68,72,1);
+}
+
+h1{
+color: white;
+font-family: 'Nunito', sans-serif;
+text-align: center;
+font-size: 2em;
+}
+
+p{
+color: white;
+font-family: 'Raleway', sans-serif;
+text-align: justify;
+font-size: 1.2em;
+line-height: 1.5;
+margin-right: 1.3em;
+margin-left: 1.3em;
+font-size: 1.2em;
+}
+
+
+@media only screen and (min-width: 600px) {
+  p{
+   text-align: center;
+    margin-right: 5em;
+    margin-left: 5em;
+   padding-bottom: 2em;
+   line-height: 2;
+   font-size: 1.2em;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+    h1{
+    text-align: center;
+    font-size: 2.4em;
+    }
+  }
+
+  .homeIllu{
+    margin-top: 0.5em;
+  }
+
+  @media only screen and (min-width: 600px) {
+  .homeIllu{
+    max-width: 50%;
+  }}
+
+/* Second Frame */
+
+.frame2{
+    display: flex;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+   
+    }
+    
+    @media only screen and (min-width: 600px) {
+    .frame2{ 
+    flex-wrap:nowrap;
+    flex-direction: row-reverse; 
+    }}
+
+.about{
+display: flex;
+flex-flow: column;
+flex-wrap: wrap;
+margin: 0 auto;
+}
+
+@media only screen and (min-width: 769px) {
+    .about{
+      flex-flow: row;
+      flex-wrap: nowrap;
+    }}
+
+.option{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 0.8fr;
+    grid-template-areas:
+    "name"
+    "price"
+    "benefits"
+    "buyButton" ;
+    background-color:#32008f; 
+    padding-top: 2em;
+    padding-right: 2em;
+    padding-left: 3em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    box-shadow: 5px 7px 5px 0px rgba(37,0,107,0.4);
+}
+
+@media only screen and (min-width: 800px) {
+    .option{
+     margin-left: 2em;
+     margin-right: 2em;
+     margin-top: 6em;
+    }}
+
+    
+
+.optionName{
+display: grid;
+align-self: center;
+justify-self: center;
+grid-area: name;
+font-family: 'Nunito', sans-serif;
+text-align: center;
+align-items: center;
+font-size: 4em;
+color: white;
+}
+
+.price{
+text-align: center;
+}
+
+.priceNum{
+grid-area: price;
+color: white;
+font-family: 'Raleway', sans-serif;
+text-align: justify;
+font-size: 3em;
+line-height: 1.5em;
+}
+
+.priceUnit{
+grid-area: price;
+color: white;
+font-family: 'Raleway', sans-serif;
+text-align: justify;
+font-size: 0.8em;
+line-height: 1.5;
+}
+
+.benefits{
+display: grid;
+align-self: center;
+justify-self: center;
+color: white;
+font-family: 'Raleway', sans-serif;
+text-align: justify;
+font-size: 1.3em;
+line-height: 2;
+margin-left: -1em;
+margin-top: -0.7em;
+padding-bottom: 0.5em;
+}
+
+.checkmark{
+  width: 10%;  
+  padding-right: 0.2em
+  
+}
+
+.optionButton{
+    display: grid;
+    margin: 0 auto;
+    grid-area: buyButton;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    text-decoration: none;
+    color: #32008f;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 10px 40px 10px 40px;
+    background-color: #FF7075;
+    box-shadow: 5px 7px 5px 0px rgba(199,88,91,0.3);
+    border: none;
+}
+
+
+.optionButton:hover{
+    box-shadow: 5px 7px 5px 0px rgba(193,68,72,1);
+}
+
+/* Third Frame */
+
+#contact{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "headline headline"
+    "phone phoneNum"
+    "email emailAd"
+ ;  
+ background-color:#32008f; 
+    padding-top: 2em;
+    padding-right: 3em;
+    padding-left: 3em;
+    padding-bottom: 2em;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    box-shadow: 5px 7px 5px 0px rgba(37,0,107,0.4)
+}
+
+
+@media only screen and (max-width: 600px) {
+    #contact{
+        padding-top: 0.5em;
+        padding-right: 3em;
+        padding-left: 3em;
+        margin-bottom: 2em;
+    }}
+
+.help{
+grid-area: headline;
+display: grid;
+text-align: center;
+color: white;
+font-family: 'Nunito', sans-serif;
+font-size: 2.4em;
+}
+
+@media only screen and (max-width: 600px) {
+    .help{
+        padding-left: -5em;
+        padding-right: -0.5em;
+    }}
+
+.phone{
+grid-area: phone;
+display: grid;
+justify-self: end;
+align-self: center;
+padding-right: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    .phone{
+        width: 50%;
+    }}
+
+.phoneNum{
+grid-area: phoneNum;
+display: grid;
+text-align: left;
+align-self: center;
+color: white;
+font-family: 'Raleway', sans-serif;
+font-size: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    .phoneNum{
+        font-size: 1.3em;
+        line-height: 2;
+    }}
+
+.email{
+grid-area: email;
+display: grid;
+justify-self: end;
+align-self: center;
+padding-right: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    .email{
+        width: 50%;
+    }}
+
+.emailAd{
+grid-area: emailAd;
+display: grid;
+text-align: left;
+align-self: center;
+color: white;
+font-family: 'Raleway', sans-serif;
+font-size: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    .emailAd{
+        font-size: 1.3em;
+        line-height: 2;
+    }}
+
+footer{
+background-color: #32008f;
+color: white;
+font-family: 'Nunito', sans-serif;
+text-align: center;
+font-size: 1.3em;
+margin-left: -5em;
+margin-right: -5em;
+margin-bottom: -5em;
+margin-top: 3em;
+text-align: center;
+padding-top: 3em;
+}
+
+.link{
+    color: white;
+}
